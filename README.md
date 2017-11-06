@@ -1,9 +1,7 @@
 # Fil_rouge
 
 
-# --------------------------------------------------------------------- #
-# -------------------------- AUTHORS/AUTEURS -------------------------- #
-# --------------------------------------------------------------------- #
+# AUTHORS/AUTEURS
 
 IMT ATLANTIQUE, GIPAD 2017-2018, ARCHITECTURE LOGICIELLE
 Professeur encadrant : Hervé Grall
