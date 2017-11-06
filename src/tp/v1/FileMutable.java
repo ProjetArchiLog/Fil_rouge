@@ -1,9 +1,6 @@
-package file;
+package tp.v1;
 
 import java.util.LinkedList;
-
-import etat.File;
-import service.ServiceNotation;
 
 public class FileMutable<T> implements File<T>, ServiceNotation<T> {
 	

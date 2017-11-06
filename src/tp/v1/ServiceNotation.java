@@ -1,4 +1,4 @@
-package service;
+package tp.v1;
 
 public interface ServiceNotation<T> {
 	
