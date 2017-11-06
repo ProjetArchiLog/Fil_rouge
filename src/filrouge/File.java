@@ -9,4 +9,8 @@ public interface File<T> {
 	default void push(T x){
 		this.getElements().add(x);
 	}
+	
+	default void tete(){
+		
+	}
 }
