@@ -8,6 +8,8 @@
 **Étudiants** : Clara TERSEN, Gabrielle Panizzoli, Denis LY  
 
 
+
+
 # GOALS/OBJECTIFS
 
 L'objectif de ce projet est de comparer les structures de données mutables à celles immutables. Nous avons considéré l'exemple des files FIFO ("First In, First Out" i.e. premier arrivé, premier sorti). Après la définition de l'interface des files, plusieurs implémentations seront données, avec des propriétés ou des usages différents : mutabilité ou non, persistance ou non.
