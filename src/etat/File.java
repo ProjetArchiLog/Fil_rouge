@@ -1,4 +1,4 @@
-package Etat;
+package etat;
 
 
 import java.util.LinkedList;
