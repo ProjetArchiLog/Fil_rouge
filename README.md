@@ -3,10 +3,9 @@
 
 # AUTHORS/AUTEURS
 
-IMT ATLANTIQUE, GIPAD 2017-2018, ARCHITECTURE LOGICIELLE  
-Professeur encadrant : Hervé Grall  
-Étudiants : Clara TERSEN, Gabrielle Panizzoli, Denis LY  
-  
+**IMT ATLANTIQUE, GIPAD 2017-2018, ARCHITECTURE LOGICIELLE**  
+**Professeur encadrant** : Hervé Grall  
+**Étudiants** : Clara TERSEN, Gabrielle Panizzoli, Denis LY  
 
 
 # GOALS/OBJECTIFS
@@ -22,22 +21,22 @@ Cette partie est un résumé des conventions utilisées. Le lecteur est libre de co
 
 Peu importe l'objet qui doit être nommé, le nom doit être assez explicite pour qu'il n'y ait aucune confusion possible sur le rôle joué par l'objet.
 
-**Package/Paquet**
+**Package/Paquet**  
 Tous les noms des packages sont en minuscule et dans le cas d'un nom à plusieurs mots, ces mots ne sont en aucun cas séparés par un espace.
 Dans notre cas : etat, fabrique, file
 
-**Class/Classe**
+**Class/Classe**  
 Le nom de la classe devrait toujours être un nom commun. Les verbes sont à proscrire. La première lettre doit toujours être en majuscule et le nom doit être gardé au singulier.
 Dans notre cas : FileMutable
 
-**Interface**
+**Interface**  
 Le nom de l'inteface devrait toujours un adjectif donnant une description des classes qui l'implémentent. Quand cela est possible, il faut choisir un nom se terminant par "-able" . La première lettre doit toujours être en majuscule et le nom doit être gardé au singulier.
 Dans notre cas : File, FabriqueFileMutable
 
-**Method/Méthode**
+**Method/Méthode**  
 Les méthodes sont en général des verbes mais des noms peuvent également être utilisés pour certains cas (accesseurs par exemple. Le nom doit être assez explicite pour comprendre ce que fait la méthode rien qu'en lisant son nom.
 
-**Variable**
+**Variable**  
 Le nom des variables sont en général écrits complètement et doit refléter son but. S'il est composé de plusieurs mots, ils doivent alors tous être collés et la première lettre de chaque mot doit être en majuscule, à l'excepetion du premier mot.
 
 
@@ -45,22 +44,22 @@ Le nom des variables sont en général écrits complètement et doit refléter son bu
 
 Cette partie va s'attacher à évaluer la complexité des méthodes implémentées dans les différents codes du projet.
 
-**push(T)**
+**push(T)**  
 On ajoute un élément en queue de file
 Complexité : O(1)
 
-**getTop()**
+**getTop()**  
 On lit la valeur de la tête de file
 Complexité : O(1)
 
-**pop()**
+**pop()**  
 On retire l'élement en tête de file
 Complexité : O(1)
 
-**getSize()**
+**getSize()**  
 Retourne la taille de la file
 Complexité : O(1)
 
-**toString**
+**toString**  
 Retourne les éléments de la file
 Complexité : O(n)
