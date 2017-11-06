@@ -1,4 +1,4 @@
-package tp.V2;
+package tp.v2;
 
 import java.util.Iterator;
 
