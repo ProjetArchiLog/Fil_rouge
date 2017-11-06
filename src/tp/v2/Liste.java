@@ -1,5 +1,4 @@
-package tp.V2;
-
+package tp.v2;
 import java.util.Iterator;
 
 public interface Liste<E> extends Iterable<E> {
@@ -42,13 +41,24 @@ public interface Liste<E> extends Iterable<E> {
 	
 	public static <E> Liste<E> vide() {
 		return new Liste<E>() {
-			// TODO Définir les méthodes utiles.			
+			public boolean casVide(){
+				return true;
+			}
 		};
 	}
 	
 	public static <E> Liste<E> cons(E t, Liste<E> r) {
 		return new Liste<E>() {
-			// TODO Définir les méthodes utiles.			
+			public E tete(){
+				return t;
+			}
+			public Liste<E> reste(){
+				return r;
+			}
+			public boolean casCons(){
+				return true;
+			}
+
 		};
 	}
 	

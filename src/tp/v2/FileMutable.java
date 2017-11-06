@@ -1,4 +1,4 @@
-package tp.V2;
+package tp.v2;
 
 public interface FileMutable<E> extends File<E> {
 
