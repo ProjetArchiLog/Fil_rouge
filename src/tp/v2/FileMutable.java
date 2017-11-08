@@ -6,6 +6,7 @@ public interface FileMutable<E> extends File<E> {
 	 * Accesseurs
 	 */
 	@Override
+	// Retourne les elements restants apres avoir retire le premier element 
 	default FileMutable<E> suivants(){
 		this.retirer();
 		return this;
@@ -24,11 +25,13 @@ public interface FileMutable<E> extends File<E> {
 	 * Services
 	 */
 	@Override
+	// Retourne une copie de la file avec l'ajout d'un element
 	default FileMutable<E> ajout(E dernierDansFile) {
 		this.ajouter(dernierDansFile);
 		return this;
 	}
 	@Override
+	// Retourne une copie de la file avec le retrait d'un element
 	default FileMutable<E> retrait() {
 		FileMutable<E> r = creerCopie();
 		r.retirer();
@@ -36,6 +39,7 @@ public interface FileMutable<E> extends File<E> {
 	}
 	// Complexité O(|secondeFile|)
 	@Override
+	// Retourne une copie de la file avec l'ajout d'une file 
 	default FileMutable<E> ajout(File<E> secondeFile) {
 		FileMutable<E> r = creerCopie();
 		for(E e : secondeFile){
