@@ -18,7 +18,7 @@ public interface Liste<E> extends Iterable<E> {
 	default Liste<E> reste() {
 		throw new UnsupportedOperationException();
 	}
-	// Indique si la liste possib
+	// Indique si la liste possible
 	default boolean casCons() {
 		return false;
 	}
