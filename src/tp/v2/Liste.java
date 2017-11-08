@@ -28,11 +28,9 @@ public interface Liste<E> extends Iterable<E> {
 	 * Services
 	 */
 	default Iterator<E> iterator() {
-		// TODO
 		return new IterateurListe<E>(this); // Compléter puis utiliser IterateurListe.
 	}
 	default Liste<E> miroir(){
-		// TODO
 		Liste<E> newListe=vide();
 		Iterator<E> iterateur=iterator();
 		while (iterator().hasNext()){
