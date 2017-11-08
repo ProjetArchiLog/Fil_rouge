@@ -29,11 +29,16 @@ public interface Liste<E> extends Iterable<E> {
 	 */
 	default Iterator<E> iterator() {
 		// TODO
-		return null; // Compléter puis utiliser IterateurListe.
+		return new IterateurListe<E>(this); // Compléter puis utiliser IterateurListe.
 	}
 	default Liste<E> miroir(){
 		// TODO
-		return null;
+		Liste<E> newListe=vide();
+		Iterator<E> iterateur=iterator();
+		while (iterator().hasNext()){
+			newListe=cons(iterateur.next(),newListe);
+		}
+		return newListe;
 	}
 	/*
 	 * Fabriques (statiques)
@@ -57,6 +62,15 @@ public interface Liste<E> extends Iterable<E> {
 			}
 			public boolean casCons(){
 				return true;
+			}
+			public int taille(){
+				IterateurListe<E> iterateur = new IterateurListe(r);
+				int taille=0;
+				while (iterateur.hasNext()){
+					iterateur.next();
+					taille++;
+				}
+				return taille;
 			}
 
 		};
