@@ -26,13 +26,11 @@ public interface File<E> extends Iterable<E> {
 	File<E> ajout(File<E> secondeFile);
 	
 	default String representation() {
-		// TODO 
-		return "";
+		return ""+ premier() + " " + suivants();
 	}
 
 	default boolean estEgal(File<E> file){
-		// TODO
-		return true;
+		return this == file;
 	}
 	
 	

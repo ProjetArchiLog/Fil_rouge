@@ -18,13 +18,15 @@ public interface FileImmutable<E> extends File<E> {
 	 */
 	@Override
 	default FileImmutable<E> ajout(E dernierDansFile) {
-		// TODO
-		return null;
+		FileImmutable<E> file = creer(dernierDansFile);
+		FileImmutable<E> clone = this;
+		clone.ajout(file);
+		return clone;
 	}
 	@Override
 	default FileImmutable<E> retrait() {
-		// TODO
-		return null;
+		FileImmutable<E> file = this.suivants();
+		return file;
 	}
 	// Complexité O(|secondeFile|)
 	@Override
