@@ -60,13 +60,7 @@ public interface ListeMutable<E> extends Liste<E>{
 				return vide();
 			}
 			
-			public void changerReste(ListeMutable<E> reste) {
-				cons(null, reste);
-			}
-			
-			public void changerTete(E tete) {
-				cons(tete, vide());
-			}							
+					
 		};
 	}
 	
