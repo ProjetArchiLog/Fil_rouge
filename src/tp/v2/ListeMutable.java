@@ -7,14 +7,17 @@ public interface ListeMutable<E> extends Liste<E>{
 	/*
 	 * Accesseurs.
 	 */
+	// permet d'accéder au reste
 	default ListeMutable<E> reste() {
 		throw new UnsupportedOperationException();
 	}
 	
+	//permet de changer le reste
 	default void changerReste(ListeMutable<E> reste) {
 		throw new UnsupportedOperationException();
 	}
 	
+	//permet de changer la tête
 	default void changerTete(E tete) {
 		throw new UnsupportedOperationException();
 	}
@@ -22,6 +25,7 @@ public interface ListeMutable<E> extends Liste<E>{
 	/*
 	 * Services
 	 */
+	// inverse la liste actuelle
 	default ListeMutable<E> miroir(){
 		ListeMutable<E> newListe=vide();
 		Iterator<E> iterateur=iterator();
@@ -30,36 +34,38 @@ public interface ListeMutable<E> extends Liste<E>{
 		}
 		return newListe;
 	}
-
+	
+	// Méthodes précedentes pour une liste non vide avec une tête donnée
 	public static <E> ListeMutable<E> cons(E t, ListeMutable<E> r){
 		return new ListeMutable<E>() {
 			
 			public ListeMutable<E> reste() {
-				return null;
+				return r;
 			}
 			
 			public void changerReste(ListeMutable<E> reste) {
-				throw new UnsupportedOperationException();
+				cons(t,reste);
 			}
 			
 			public void changerTete(E tete) {
-				throw new UnsupportedOperationException();
+				cons(tete, r);
 			}		
 		};
 	}
 	
+	//Méthodes précédentes pour une liste vide
 	public static <E> ListeMutable<E> vide() {
 		return new ListeMutable<E>() {
 			public ListeMutable<E> reste() {
-				throw new UnsupportedOperationException();
+				return vide();
 			}
 			
 			public void changerReste(ListeMutable<E> reste) {
-				throw new UnsupportedOperationException();
+				vide();
 			}
 			
 			public void changerTete(E tete) {
-				throw new UnsupportedOperationException();
+				vide();
 			}							
 		};
 	}
