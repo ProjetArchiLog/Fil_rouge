@@ -49,7 +49,25 @@ public interface ListeMutable<E> extends Liste<E>{
 			
 			public void changerTete(E tete) {
 				cons(tete, r);
-			}		
+			}
+			
+			public E tete(){
+				return t;
+			}
+			
+			public boolean casCons(){
+				return true;
+			}
+			public int taille(){
+				IterateurListe<E> iterateur = new IterateurListe<E>(r);
+				int taille=0;
+				while (iterateur.hasNext()){
+					iterateur.next();
+					taille++;
+				}
+				return taille;
+			}
+
 		};
 	}
 	
