@@ -16,6 +16,7 @@ public interface FileImmutable<E> extends File<E> {
 	/*
 	 * Services
 	 */
+	// Retourne la file plus un élément à la fin
 	@Override
 	default FileImmutable<E> ajout(E dernierDansFile) {
 		FileImmutable<E> file = creer(dernierDansFile);
@@ -23,6 +24,7 @@ public interface FileImmutable<E> extends File<E> {
 		clone.ajout(file);
 		return clone;
 	}
+	// Retourne la file moins le premier élément
 	@Override
 	default FileImmutable<E> retrait() {
 		FileImmutable<E> file = this.suivants();
