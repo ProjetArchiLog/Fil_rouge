@@ -25,6 +25,7 @@ public interface File<E> extends Iterable<E> {
 	File<E> retrait();
 	File<E> ajout(File<E> secondeFile);
 	
+	// Retourne les elements de la file de maniere recursive
 	default String representation() {
 		if (this.estVide()) {
 			return ("");
@@ -34,6 +35,8 @@ public interface File<E> extends Iterable<E> {
 		}
 	}
 
+	// Regarde si les elements des deux files sont egaux deux a deux.
+	// Methode recursive
 	default boolean estEgal(File<E> file){
 		if (this.estVide() && !file.estVide()) {
 			return false;
