@@ -62,7 +62,7 @@ public interface Liste<E> extends Iterable<E> {
 				return true;
 			}
 			public int taille(){
-				IterateurListe<E> iterateur = new IterateurListe(r);
+				IterateurListe<E> iterateur = new IterateurListe<E>(r);
 				int taille=0;
 				while (iterateur.hasNext()){
 					iterateur.next();
