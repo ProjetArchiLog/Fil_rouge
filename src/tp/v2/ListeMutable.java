@@ -61,11 +61,11 @@ public interface ListeMutable<E> extends Liste<E>{
 			}
 			
 			public void changerReste(ListeMutable<E> reste) {
-				vide();
+				cons(null, reste);
 			}
 			
 			public void changerTete(E tete) {
-				vide();
+				cons(tete, vide());
 			}							
 		};
 	}
