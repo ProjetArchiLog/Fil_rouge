@@ -1,30 +1,28 @@
 package tp.v2;
 
 import java.util.Iterator;
-import java.util.List;
 import java.util.NoSuchElementException;
 
 public class IterateurListe<E> implements Iterator<E> {
 
-	private int current;
-	private List<E> myList;
+	private Liste<E> liste;
 	
-	public IterateurListe(List<E> l) {
-		this.myList = l;
-		current = 0;
+	public IterateurListe(Liste<E> l) {
+		this.liste = l;
 	}
 	@Override
 	public boolean hasNext() {
-		return !(myList.size() == current);
+		return !(liste.iterator().hasNext());
 	}
 
 	@Override
 	public E next() {
 		if (this.hasNext()) {
-			return (myList.get(current++));
+			liste = liste.reste();
+			return liste.tete();
 		}
 		else {
-			throw new NoSuchElementException("There are no elements size = " + myList.size());
+			throw new NoSuchElementException("There is no next element");
         }	
 	}
 
