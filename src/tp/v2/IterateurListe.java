@@ -15,7 +15,7 @@ public class IterateurListe<E> implements Iterator<E> {
 	// Retourne s'il y a un prochain element dans la liste
 	@Override
 	public boolean hasNext() {
-		return !(liste.iterator().hasNext());
+		return !liste.estVide();
 	}
 
 	// Retourne le prochain element s'il existe,
