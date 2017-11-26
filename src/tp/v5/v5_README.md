@@ -43,12 +43,38 @@ Les méthodes sont en général des verbes mais des noms peuvent également être uti
 **Variable**  
 Le nom des variables sont en général écrits complètement et doit refléter son but. S'il est composé de plusieurs mots, ils doivent alors tous être collés et la première lettre de chaque mot doit être en majuscule, à l'excepetion du premier mot.
 
+
 # COMPLEXITÉ DES OPÉRATIONS
+
 ## File
+
+**estVide()**
+Complexité en O(1).
+
 **ajout(K)**
 Complexité en O(n) avec n la taille de la file.
 
-**FileImmutable**
+## FileImmutable
+
+**ajout(E)**
+Complexité en O(1).
+
+**retrait()**
+Complexité en O(1).
+
+**ajout(File<E>)**
+Complexité en O(n) avec n la taille de la file.
+
+## FileMutable
+
+**suivants()**
+Complexité en O(1).
+
+**ajout(E)**
+Complexité en O(1).
+
+**retrait()**
+Complexité en O(1).
 
 # GUIDE POUR LANCER LES TESTS
 
