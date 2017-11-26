@@ -1,10 +1,9 @@
 # Fil_rouge v5
+**IMT ATLANTIQUE, GIPAD 2017-2018, ARCHITECTURE LOGICIELLE** 
 **Date de dernière modification** : 26/11/2017
 
 
 # AUTEURS
-
-**IMT ATLANTIQUE, GIPAD 2017-2018, ARCHITECTURE LOGICIELLE**  
 **Professeur encadrant** : Hervé Grall  
 **Étudiants** : Clara TERSEN, Gabrielle Panizzoli, Denis LY  
 
