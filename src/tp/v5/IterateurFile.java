@@ -4,6 +4,7 @@ import java.util.Iterator;
 
 public class IterateurFile<K extends File<K,E>,E> implements Iterator<E> {
 
+	/** La file courante */
 	private K courant;
 
 	public IterateurFile(K file) {

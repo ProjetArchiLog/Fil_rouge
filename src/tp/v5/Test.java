@@ -2,6 +2,7 @@ package tp.v5;
 
 public class Test {
 	
+	/** Temps d'execution des méthodes selon le type de file */
 	private long tempsMutable; // temps mis pour réaliser testsMutables();
 	private long tempsImmutable; // temps mis pour réaliser testsImmutables();
 	private int n; // n est la taille du test

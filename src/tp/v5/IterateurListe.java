@@ -4,6 +4,7 @@ import java.util.Iterator;
 
 public class IterateurListe<K extends Liste<K, E>, E> implements Iterator<E> {
 
+	/** La liste courante */
 	private K courant;
 
 	public IterateurListe(K liste) {

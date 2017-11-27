@@ -2,6 +2,11 @@ package tp.v5;
 
 public interface FileMutable<E> extends File<FileMutable<E>,E>, IdentifiableParIteration<FileMutable<E>,E>, RepresentableParIteration<E> {
 	
+	/**
+	 * Ajouter.
+	 *
+	 * @param element the element
+	 */
 	void ajouter(E element);
 	void retirer();
 	
