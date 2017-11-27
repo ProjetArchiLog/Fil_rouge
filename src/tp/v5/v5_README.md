@@ -77,5 +77,9 @@ Complexité en O(1).
 
 # GUIDE POUR LANCER LES TESTS
 
+Les tests sont rassemblés dans la classe Test ceux qui sont commentés ne fonctionnent pas
+
 # COMPARATIF DES PERFORMANCES
+
+Nous avons comparé les différents temps d'exécutions dans la classe test
 
