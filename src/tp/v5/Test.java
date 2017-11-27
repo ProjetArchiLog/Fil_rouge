@@ -2,9 +2,18 @@ package tp.v5;
 
 public class Test {
 	
-	public static void main(String[] args) {
-		
-		// 
+	private long tempsMutable;
+	private long tempsImmutable;
+	
+	
+	public Test() {
+		super();
+		this.tempsMutable = 0;
+		this.tempsImmutable = 0;
+	}
+	
+	
+	public void testsMutable(){
 		
 		// tests file mutable
 		System.out.println("tests files mutables");
@@ -12,44 +21,63 @@ public class Test {
 		FileMutable<Integer> FileMutable = new EnveloppeFileMutable();
 		FileMutable.ajouter(5);
 		System.out.println("taille après ajout de 5 : "+FileMutable.taille());
-		FileMutable.ajouter(8);
-		FileMutable.ajouter(4);
+		for (int i = 5; i<20; i++){
+			FileMutable.ajout(i);
+		}
 		System.out.println("vide? "+FileMutable.estVide());
 		System.out.println("taille après ajout de 8 puis 4 : "+FileMutable.taille());
 		System.out.println("premier element : "+FileMutable.premier());
 		FileMutable.retirer();
 		//System.out.println(FileMutable.premier());
 		long t2 = System.currentTimeMillis();
-		long tempsMutable = t2-t1;
+		this.tempsMutable = t2-t1;
 		System.out.println("temps en ms:" + tempsMutable);
 		
+		
+		
+	}
 	
+	public void testsImmutables(){
 		// tests File immutable:
 		System.out.println("tests files immutables:");
 		long t3 = System.currentTimeMillis();
 		FileImmutable<Integer> FileImmutable = new EnveloppeFileImmutable();
-		FileImmutable=FileImmutable.ajout(5);
-		FileImmutable=FileImmutable.ajout(8);
-		FileImmutable=FileImmutable.ajout(4);
+		for (int i = 5; i<20; i++){
+			FileImmutable.ajout(i);
+		}
 		System.out.println("vide? "+FileImmutable.estVide());
 		System.out.println("taille: "+ FileImmutable.taille());
 		//System.out.println(FileImmutable.premier());
 		//FileImmutable.retrait();
 		//System.out.println(FileImmutable.premier());
 		long t4 = System.currentTimeMillis();
-		long tempsImmutable = t4-t3;
+		this.tempsImmutable = t4-t3;
 		System.out.println("temps en ms:" + tempsImmutable);
+				
 		
-		
-		// Analyse comparative:
+	}
+	
+	public void analyseComparative(){
 		if (tempsMutable > tempsImmutable){
 			System.out.println("Les files Immutables fonctionnent plus rapidement que les files mutables");
 		}else{
 			System.out.println("Les files mutables fonctionnent plus rapidement que les files immutables");
 		}
 		
+	}
+	
+	public static void main(String[] args) {
+		
+		Test a = new Test();
+		a.testsMutable();
+		a.testsImmutables();
+		a.analyseComparative();
+		
+		
 		
 		
 	}
+
+	
 
 }
