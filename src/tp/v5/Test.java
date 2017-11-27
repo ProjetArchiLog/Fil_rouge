@@ -75,7 +75,7 @@ public class Test {
 	
 	public static void main(String[] args) {
 		
-		Test a = new Test(100);
+		Test a = new Test(1000);
 		a.testsMutable();
 		a.testsImmutables();
 		a.analyseComparative();

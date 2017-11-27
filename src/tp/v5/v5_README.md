@@ -77,9 +77,11 @@ Complexité en O(1).
 
 # GUIDE POUR LANCER LES TESTS
 
-Les tests sont rassemblés dans la classe Test ceux qui sont commentés ne fonctionnent pas
+Les tests sont rassemblés dans la classe Test.
+Il y a une fonction qui teste les iles mutables, et une autre qui teste les files non immutables. Les différents temps de calcul sont calculés et comparés dans la fonction anayseComparative.
+On a ajouté un paramètre n qui fixe la taille (le nombre d'ajouts et de retraits) du test.
 
 # COMPARATIF DES PERFORMANCES
 
-Nous avons comparé les différents temps d'exécutions dans la classe test
+Nous avons comparé les différents temps d'exécutions dans la classe test, dans la fonction analyseComparative. 
 
