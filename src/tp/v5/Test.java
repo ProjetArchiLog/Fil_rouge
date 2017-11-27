@@ -2,14 +2,16 @@ package tp.v5;
 
 public class Test {
 	
-	private long tempsMutable;
-	private long tempsImmutable;
+	private long tempsMutable; // temps mis pour réaliser testsMutables();
+	private long tempsImmutable; // temps mis pour réaliser testsImmutables();
+	private int n; // n est la taille du test
 	
 	
-	public Test() {
+	public Test(int n) {
 		super();
 		this.tempsMutable = 0;
 		this.tempsImmutable = 0;
+		this.n = n;
 	}
 	
 	
@@ -21,7 +23,7 @@ public class Test {
 		FileMutable<Integer> FileMutable = new EnveloppeFileMutable();
 		FileMutable.ajouter(5);
 		System.out.println("taille après ajout de 5 : "+FileMutable.taille());
-		for (int i = 5; i<20; i++){
+		for (int i = 0; i<n; i++){
 			FileMutable.ajout(i);
 		}
 		System.out.println("vide? "+FileMutable.estVide());
@@ -42,7 +44,7 @@ public class Test {
 		System.out.println("tests files immutables:");
 		long t3 = System.currentTimeMillis();
 		FileImmutable<Integer> FileImmutable = new EnveloppeFileImmutable();
-		for (int i = 5; i<20; i++){
+		for (int i = 0; i<n; i++){
 			FileImmutable.ajout(i);
 		}
 		System.out.println("vide? "+FileImmutable.estVide());
@@ -68,7 +70,7 @@ public class Test {
 	
 	public static void main(String[] args) {
 		
-		Test a = new Test();
+		Test a = new Test(100);
 		a.testsMutable();
 		a.testsImmutables();
 		a.analyseComparative();
