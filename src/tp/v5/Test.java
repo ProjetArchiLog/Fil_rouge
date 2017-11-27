@@ -33,7 +33,7 @@ public class Test {
 			FileMutable.retirer();
 		}
 		
-		//System.out.println(FileMutable.premier());
+		System.out.println(FileMutable.premier());
 		long t2 = System.currentTimeMillis();
 		this.tempsMutable = t2-t1;
 		System.out.println("temps en ms:" + tempsMutable);
@@ -55,11 +55,11 @@ public class Test {
 		}
 		System.out.println("taille après ajout d'entiers 0 à n: "+FileImmutable.taille());
 		System.out.println("vide? "+FileImmutable.estVide());
-		//System.out.println(FileImmutable.premier());
+		//System.out.println("premier element : "+FileImmutable.premier());
 		/*for (int i = 0; i<n; i++){
 			FileImmutable.retrait();
 		}*/
-		//System.out.println(FileImmutable.premier());
+		//System.out.println("premier element : "+FileImmutable.premier());
 		long t4 = System.currentTimeMillis();
 		this.tempsImmutable = t4-t3;
 		System.out.println("temps en ms:" + tempsImmutable);
