@@ -33,7 +33,7 @@ public class Test {
 			FileMutable.retirer();
 		}
 		
-		System.out.println(FileMutable.premier());
+		System.out.println("premier element : "+FileMutable.premier());
 		long t2 = System.currentTimeMillis();
 		this.tempsMutable = t2-t1;
 		System.out.println("temps en ms:" + tempsMutable);
@@ -85,11 +85,5 @@ public class Test {
 		a.testsImmutables();
 		a.analyseComparative();
 		
-		
-		
-		
 	}
-
-	
-
 }
