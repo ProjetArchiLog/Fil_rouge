@@ -29,7 +29,10 @@ public class Test {
 		System.out.println("vide? "+FileMutable.estVide());
 		System.out.println("taille après ajout de 8 puis 4 : "+FileMutable.taille());
 		System.out.println("premier element : "+FileMutable.premier());
-		FileMutable.retirer();
+		for (int i = 0; i<n; i++){
+			FileMutable.retirer();
+		}
+		
 		//System.out.println(FileMutable.premier());
 		long t2 = System.currentTimeMillis();
 		this.tempsMutable = t2-t1;
@@ -50,7 +53,9 @@ public class Test {
 		System.out.println("vide? "+FileImmutable.estVide());
 		System.out.println("taille: "+ FileImmutable.taille());
 		//System.out.println(FileImmutable.premier());
-		//FileImmutable.retrait();
+		/*for (int i = 0; i<n; i++){
+			FileImmutable.retrait();
+		}*/
 		//System.out.println(FileImmutable.premier());
 		long t4 = System.currentTimeMillis();
 		this.tempsImmutable = t4-t3;
