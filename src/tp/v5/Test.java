@@ -27,7 +27,7 @@ public class Test {
 			FileMutable.ajout(i);
 		}
 		System.out.println("vide? "+FileMutable.estVide());
-		System.out.println("taille après ajout de 8 puis 4 : "+FileMutable.taille());
+		System.out.println("taille après ajout d'entiers 0 à n: "+FileMutable.taille());
 		System.out.println("premier element : "+FileMutable.premier());
 		for (int i = 0; i<n; i++){
 			FileMutable.retirer();
@@ -44,14 +44,17 @@ public class Test {
 	
 	public void testsImmutables(){
 		// tests File immutable:
+		System.out.println("-----------------------");
 		System.out.println("tests files immutables:");
 		long t3 = System.currentTimeMillis();
 		FileImmutable<Integer> FileImmutable = new EnveloppeFileImmutable();
+		FileImmutable.ajout(5);
+		System.out.println("taille après ajout de 5 : "+FileImmutable.taille());
 		for (int i = 0; i<n; i++){
 			FileImmutable.ajout(i);
 		}
+		System.out.println("taille après ajout d'entiers 0 à n: "+FileImmutable.taille());
 		System.out.println("vide? "+FileImmutable.estVide());
-		System.out.println("taille: "+ FileImmutable.taille());
 		//System.out.println(FileImmutable.premier());
 		/*for (int i = 0; i<n; i++){
 			FileImmutable.retrait();
@@ -63,8 +66,10 @@ public class Test {
 				
 		
 	}
+	// compare les temps d'exécution des différents tests
 	
 	public void analyseComparative(){
+		System.out.println("---------------------");
 		if (tempsMutable > tempsImmutable){
 			System.out.println("Les files Immutables fonctionnent plus rapidement que les files mutables");
 		}else{
