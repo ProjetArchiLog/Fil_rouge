@@ -48,6 +48,8 @@ public class EnveloppeFileImmutable <K  extends FileImmutable<E>,E> implements F
 		// TODO Auto-generated method stub
 		return this.taille;
 	}
+	
+	
 
 	@Override
 	public FileImmutable<E> creer(E dernier) {

@@ -43,6 +43,7 @@ public class EnveloppeFileMutable<K  extends FileMutable<E>,E> implements FileMu
 		else {
 			this.suivants.ajouter(element);
 		}
+		this.taille ++;
 		
 	}
 
@@ -59,7 +60,7 @@ public class EnveloppeFileMutable<K  extends FileMutable<E>,E> implements FileMu
 		else {
 			this.premier=null;
 			this.taille=0;
-		}		
+		}	
 	}
 
 	@Override

@@ -12,4 +12,6 @@ public interface FileImmutable<E> extends File<FileImmutable<E>,E>, Identifiable
 		return this.suivants();
 	}
 
+	
+
 }

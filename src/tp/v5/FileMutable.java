@@ -7,7 +7,7 @@ public interface FileMutable<E> extends File<FileMutable<E>,E>, IdentifiableParI
 	
 	FileMutable<E> creerCopie(); // Fabrique réalisant une copie de la file
 	
-	default FileMutable<E> suivants() { //
+	default FileMutable<E> suivants() { // retourne la File sans le premier Element
 		FileMutable<E> r = creerCopie();
 		r.retirer();
 		return r;
