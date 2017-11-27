@@ -37,14 +37,16 @@ public class EnveloppeFileMutable<K  extends FileMutable<E>,E> implements FileMu
 
 	@Override
 	public void ajouter(E element) {
-		if (taille()==0){
+		if (this.estVide()){
 			this.premier=element;
 		}
 		else {
+			if(this.taille()==1){
+				this.suivants = (K) this.creer();
+			}
 			this.suivants.ajouter(element);
 		}
 		this.taille ++;
-		
 	}
 
 	@Override

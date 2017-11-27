@@ -14,6 +14,12 @@ public class EnveloppeFileImmutable <K  extends FileImmutable<E>,E> implements F
 		this.taille=0;
 	}
 	
+	public EnveloppeFileImmutable(E premier, K suivants, int taille){
+		this.premier=premier;
+		this.suivants=suivants;
+		this.taille=taille;
+	}	
+	
 	@Override
 	public E premier() {
 		if (this.estVide()){
@@ -50,11 +56,15 @@ public class EnveloppeFileImmutable <K  extends FileImmutable<E>,E> implements F
 	}
 	
 	
-
 	@Override
 	public FileImmutable<E> creer(E dernier) {
-		FileImmutable<E> f=creer();
-		f=f.ajout(dernier);
+		if (this.estVide()){
+			return new EnveloppeFileImmutable(dernier,creer(),1);
+		}
+		if (this.taille()==1){
+			return new EnveloppeFileImmutable(this.premier(),new EnveloppeFileImmutable(dernier,creer(),1),this.taille++);
+		}
+		FileImmutable<E> f=new EnveloppeFileImmutable(this.premier(),suivants.creer(dernier),this.taille++);
 		return f;
 	}
 
