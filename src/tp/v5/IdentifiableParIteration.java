@@ -2,9 +2,8 @@ package tp.v5;
 
 import java.util.Iterator;
 
-// TODO: Auto-generated Javadoc
 /**
- * The Interface IdentifiableParIteration.
+ * Interface IdentifiableParIteration.
  *
  * @param <K> the key type
  * @param <E> the element type

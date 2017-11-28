@@ -1,8 +1,7 @@
 package tp.v5;
 
-// TODO: Auto-generated Javadoc
 /**
- * The Interface EtatFileMutable.
+ * Interface EtatFileMutable.
  *
  * @param <K> the key type
  * @param <E> the element type

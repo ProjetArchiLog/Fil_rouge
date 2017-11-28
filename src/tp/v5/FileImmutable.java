@@ -1,8 +1,7 @@
 package tp.v5;
 
-// TODO: Auto-generated Javadoc
 /**
- * The Interface FileImmutable.
+ * Interface FileImmutable.
  *
  * @param <E> the element type
  */

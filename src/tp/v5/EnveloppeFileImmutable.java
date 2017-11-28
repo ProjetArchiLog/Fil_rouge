@@ -2,12 +2,11 @@ package tp.v5;
 
 import java.util.Iterator;
 
-// TODO: Auto-generated Javadoc
 /**
- * The Class EnveloppeFileImmutable.
+ * Classe EnveloppeFileImmutable implémentant les interfaces files immutables et l'état file immutable
  *
- * @param <K> the key type
- * @param <E> the element type
+ * @param <K> sous-file
+ * @param <E> élément de la file
  */
 public class EnveloppeFileImmutable <K  extends FileImmutable<E>,E> implements FileImmutable<E>, EtatFileImmutable<K,E>{
 
